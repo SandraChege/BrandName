@@ -1,0 +1,282 @@
+        *{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --lightgrey:#d3d3d3;
+    --blue:#0000ff;
+    --white:#fff;
+    --gray: #808080;
+    --darkblue:rgb(2, 2, 54);
+}
+#home{
+    background-image: url('./images/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+nav .logo a{
+    text-decoration: none;
+    color:white;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px 10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav .button a{
+    color:white;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 20px 10px;
+}
+.colorbtn{
+    background-color: #0000ff;
+    border-radius: 10px;
+}
+.hometxt{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /*changed from center*/
+    flex-direction: column;
+    color: white;
+}
+.hometxt h2{
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 20px;
+}
+.hometxt p{
+    padding: 20px;
+    font-size: 18px;
+}
+/*PRICING*/
+#pricing{
+    background-color: var(--lightgrey);
+}
+#industry h1{
+    text-align: center;
+    margin-top: 3em;    /*change this*/
+    margin-bottom: 1.5em;    /*change this*/
+    font-size: 30px; /*Work on this later*/
+}
+#industry p{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.personprofile{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "profileone profiletwo profilethree";
+    justify-items: center;
+    align-items: center;
+}
+.card1{
+    grid-area: profileone;
+}
+.card2{
+    grid-area: profiletwo;
+}
+.card3{
+    grid-area: profilethree;
+}
+.personcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.1); 
+    margin-bottom: 5em; /*change this*/
+    margin-top: 5em;    /*change this*/
+}
+.personcard img{
+    width: 40%;
+    padding: 10px;
+}
+.personcard .profileicons{
+    color:yellow;
+}
+.priceimages{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 5em; /*change this*/
+}
+.priceimages img{
+    width: 5%;
+}
+.letter {
+    background: linear-gradient(to right, rgb(8, 8, 241) 70%, rgb(230, 13, 121) 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.letter div p{
+    text-transform: capitalize;
+    color: var(--white);
+}
+.letter div h1 input[type=text], .letter div h1 input[type=button]{
+    padding: 10px;
+}
+.letter div h1 input[type=button]{
+    background-color: var(--blue);
+    color: var(--white);
+}
+#pricecard h2{
+    text-align: center;
+    margin: 30px;
+    /* font-size: 30px; */
+}
+#pricecard p {
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+#pricecard div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+/* .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid var(--blue);
+    align-items: center;
+    margin: 10px;
+    width: 40%;
+} */
+.card h2, .card p{
+    padding: 10px;
+}
+.card h3 span{
+    color: var(--blue);
+    padding-left: 2px;
+    font-size: 15px;
+}
+/*WORLD*/
+#world{
+    background: linear-gradient(to bottom, var(--darkblue) 70%, var(--white) 30%);
+    color: var(--white);
+}
+.continent{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "world1 world2"; */
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.continenttext{
+    /* grid-area: world1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.continenttext h1{
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.continentimage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formappointment{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 10px;
+}
+.formappointment form{
+    background-color: var(--white);
+    width: 30%;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: stretch;
+}
+.formappointment form h2{
+    padding: 15px;
+    text-align: center;
+}
+form div{
+    padding: 10px;
+}
+#formname, #formemail, #formdepartment, #formtime, #formbutton{
+    padding: 10px;
+    width:80%
+}
+#formbutton{
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 10px;
+}
+/*FOOTER*/
+.companylist{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "one two three four five";
+    background-color: var(--white);
+    padding: 10px;
+}
+.part1{
+    grid-area: one;
+}
+.part2{
+    grid-area: two;
+}
+.part3{
+    grid-area: three;
+}
+.part4{
+    grid-area: four;
+}
+.part5{
+    grid-area: five;
+}
+.part1 .handle, .part2 .handle, .part3 .handle, .part4 .handle, .part5 .handle{
+    font-weight: 800;
+    color: black;
+}
+.part1 p, .part2 p, .part3 p, .part4 p, .part5 p{
+    padding: 5px;
+    font-size: 18px;
+    color: var(--gray);
+}
+.rights{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--lightgrey);
+    color: var(--gray);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.footericon{
+    color: var(--blue);
+    font-size: 20px;
+    padding-right: 10px;
+}
