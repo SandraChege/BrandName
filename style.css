@@ -21,7 +21,7 @@ body{
     background-image: url('./images/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 100%
 }
 nav{
     display: flex;
@@ -378,6 +378,7 @@ form div{
     display: flex;
     justify-content: space-between;
     padding-bottom: 2rem;
+    padding-top: 2rem;
     /* padding: 10px; */
 }
 .lastworld h2{
@@ -443,7 +444,37 @@ form div{
     padding-right: 10px;
 }
 @media screen and (max-width:800px) {
-   
+    .homebuttons{
+        margin-bottom: 2.5rem;
+    }
+    .home-cardbody{
+        margin-top: -30px;
+    }
+    #industry p{
+        font-size: 18px;
+    }
+    #industry .personcard p{
+        font-size: 18px;
+    }
+    #pricecard .cardbody .icongreen, #pricecard .cardbody .icongrey{
+        font-size: 25px;
+    }
+   #world .continenttext{
+    width: 30%;
+   } 
+   #world .continentimage{
+    width: 70%;
+   }
+   .formappointment form{
+    width: 45%;
+   }
+   #myfooter .companylist P, #myfooter .rights p{
+    font-size: 16px;
+   }
+   .part5 .footericon{
+    font-size: 18px;
+    color: green;
+   }
 }
 @media screen and (max-width:420px){
     .hometxt h1{
