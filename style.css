@@ -16,9 +16,9 @@ body{
    flex-direction: column;
    align-items: center;
 }
-#webbody{
+/* #webbody{
     width: 80%;
-}
+} */
 #home{
     /* background: url('./images/hero.png'), linear-gradient(#fff, #fff); */
     background-image: url('./images/hero.png');
@@ -133,7 +133,9 @@ nav .button a{
     color: var(--white);
     font-size: 40px;
 }
+
 /*PRICING*/
+
 #pricing{
     background-color: var(--lightgrey);
 }
@@ -142,7 +144,7 @@ nav .button a{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "division1 division2 division3";
-    margin-top: 5em;
+    margin-top: 8rem;
 }
 .divisionarea {
     display: flex;
@@ -151,7 +153,7 @@ nav .button a{
 }
 .divisionarea .divisionicon{
     color: var(--blue);
-    font-size: 50px;
+    font-size: 40px;
     padding: 10px;
 }
 .divisionarea h3{
@@ -447,6 +449,12 @@ form div{
 @media screen and (max-width:800px) {
    
 }
-@media screen and (max-width:500px){
-    
+@media screen and (max-width:420px){
+    .hometxt h1{
+        font-size: 38px;
+    }
+    .hometxt p{
+        font-size: 15px;
+        text-align: center;
+    }
 }
