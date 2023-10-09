@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', serif;
 }
 :root{
     --lightgrey:#d3d3d3;
@@ -8,6 +10,14 @@
     --white:#fff;
     --gray: #808080;
     --darkblue:rgb(2, 2, 54);
+}
+body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+#webbody{
+    width: 80%;
 }
 #home{
     /* background: url('./images/hero.png'), linear-gradient(#fff, #fff); */
@@ -21,100 +31,104 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 5px;
+    padding: 1rem;
 }
-nav .logo a{
+ nav .logo h2 a{
     text-decoration: none;
     color:white;
-    font-weight: 900;
-    font-size: 20px;
-    padding: 20px 10px;
+    padding: 10px; 
 }
 nav ul li{
     display: inline-block;
-    padding: 20px 10px;
+    padding: 10px; 
 }
 nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 nav .button a{
     color:white;
     text-decoration: none;
     list-style-type: none;
-    padding: 20px 10px;
-}
+    padding: 10px;
+} 
 .colorbtn{
     background-color: #0000ff;
     border-radius: 10px;
+}
+.colorbtn a .member-icon{
+    text-align: center;
 }
 .hometxt{
     display: flex;
     align-items: center;
     justify-content: center; /*changed from flex-end orcenter*/
     flex-direction: column;
+    margin-top: 2rem;
     color: white;
-    height: 100%;
-    padding: 20px;
+    padding-top: 5rem;
+
 }
 .hometxt h1{
     text-transform: capitalize;
-    /* padding: 10px; */
     margin: 10px;
     font-size: 50px;
 }
 .hometxt p{
-    padding: 20px;
+    padding: 0.5rem;
     text-align: center;
-    font-size: 18px;
 }
 .homebuttons{
-    margin-bottom: 50px;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.2rem;
 }
 .homebuttons .homebutton1{
     background-color: var(--blue);
     color: var(--white);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     border: var(--blue);
 }
 .homebuttons .homebutton2{
     padding: 20px;
     color: var(--white);
-    border: var(--white);
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255, 0.3);
+    border: solid 1px var(--white);
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255, 0);
 }
 .homecards{
     display: flex;
-   justify-content: space-evenly;
-   align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
 }
 .home-cardbody{
+    /* z-index: 1; */
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1.8rem;
     position: absolute;
-    bottom: -20%;
-}
+    bottom: -10%; 
+} 
 .home-cardbody .hcard{
     background-color: var(--white);
     padding: 10px;
-    margin: 0 20px;
+    /* margin: 1rem; */
 }
 .home-cardbody .hcard .hicon{
     color: var(--blue);
     font-size: 40px;
-}
-.home-cardbody .hcard h2{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+} 
+ /* .home-cardbody .hcard h3{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}  */
 .home-cardbody .h3card{
     background-color: var(--blue);
     color: white;
-}
+} 
 .home-cardbody .h3card .hicon{
     color: var(--white);
     font-size: 40px;
@@ -429,4 +443,10 @@ form div{
     color: var(--blue);
     font-size: 20px;
     padding-right: 10px;
+}
+@media screen and (max-width:800px) {
+   
+}
+@media screen and (max-width:500px){
+    
 }
