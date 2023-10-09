@@ -16,16 +16,12 @@ body{
    flex-direction: column;
    align-items: center;
 }
-/* #webbody{
-    width: 80%;
-} */
 #home{
     /* background: url('./images/hero.png'), linear-gradient(#fff, #fff); */
     background-image: url('./images/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    /* position: relative; */
+    height: 80vh;
 }
 nav{
     display: flex;
@@ -98,34 +94,21 @@ nav .button a{
     border-radius: 15px;
     background-color: rgb(255, 255, 255, 0);
 }
-.homecards{
-    display: flex;
-    justify-content: center;
-    margin-top: 7rem;
-}
 .home-cardbody{
-    /* z-index: 1; */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.8rem;
-    margin-bottom: -100px;
-    /* position: absolute;
-    bottom: -10%;  */
+    margin-top: -50px;
 } 
 .home-cardbody .hcard{
     background-color: var(--white);
     padding: 10px;
-    /* margin: 1rem; */
 }
 .home-cardbody .hcard .hicon{
     color: var(--blue);
     font-size: 40px;
-} 
- /* .home-cardbody .hcard h3{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}  */
+}
 .home-cardbody .h3card{
     background-color: var(--blue);
     color: white;
@@ -136,16 +119,15 @@ nav .button a{
 }
 
 /*PRICING*/
-
 #pricing{
-    background-color: var(--lightgrey);
+    background-color: #fcfbfb;
 }
 .division{
     background-color: var(--white);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "division1 division2 division3";
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 .divisionarea {
     display: flex;
@@ -219,6 +201,7 @@ nav .button a{
 .personcard .profileicons{
     color:yellow;
 }
+/*VECTOR IMAGES*/
 .priceimages{
     display: flex;
     justify-content: space-around;
@@ -260,47 +243,44 @@ nav .button a{
 
 /*PRICE CARD*/
 
-#pricecard h2, #pricecard p{
+#pricecard .pricetop{
     text-align: center;
-    margin: 10px;
-    padding: 10px;
+    padding: 4rem;
 }
-#pricecard .p-price{
+.pricetop p{
+    padding-top: 15px;
     color: var(--gray);
-    font-size: 20px;
 }
-.cardcontainer {
+.pricecardcontainer {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
-    align-items: center;
-    gap: 0; 
-    margin: 20px;
-}
+    padding-bottom: 5rem;
+} 
 .cardbody {
-    /* flex: 1; */
     border: 1px solid  var(--blue);
     padding: 20px;
     text-align: center;
-    /* box-shadow: 5px 5px 5px 5px black; */
 }
 .cardbody h2{
-    padding: 10px;
+    padding: 30px;
 }
-.cardbody p{
+.cardbody .parprice{
     padding: 10px;
+    color: var(--gray);
     font-weight: 700;
 }
 .cardbody .price{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .price{
     color: var(--blue);
 }
 .cardbody .price h3{
-    margin: 0;
     padding-right: 5px;
     font-size: 30px;
 }
@@ -310,20 +290,31 @@ nav .button a{
 .cardbody .icongreen{
     color: rgb(28, 209, 28);
     font-size: 30px;
+    text-align: center;
 }
 .cardbody .icongrey{
     color: var(--gray);
     font-size: 30px;
+    text-align: center;
 }
-.standard{
-    background-color: rgb(5, 5, 100);
+.cardbody:hover{
+    background-color: var(--darkblue);
     color: var(--white);
+}
+.cardbody button{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    border: var(--blue);
+    margin-top: 2rem;
 }
 
 /*WORLD*/
 #world{
-    background: linear-gradient(to bottom, var(--darkblue) 70%, var(--lightgrey) 30%);
+    background: linear-gradient(to bottom, var(--darkblue) 70%, #fcfbfb 30%);
     color: var(--white);
+    padding-bottom: 3rem;
 }
 .continent{
     /* display: grid;
@@ -331,14 +322,16 @@ nav .button a{
     grid-template-rows: 1fr;
     grid-template-areas: "world1 world2"; */
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 10px;
+    justify-content: space-between; 
+    padding: 2rem;
 }
 .continenttext{
     /* grid-area: world1; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: space-around; */
+    justify-content: flex-start;
+    width: 40%;
 }
 .continenttext h1{
     margin-bottom: 20px;
@@ -384,7 +377,8 @@ form div{
 .lastworld{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    padding-bottom: 2rem;
+    /* padding: 10px; */
 }
 .lastworld h2{
     color: black;
@@ -399,6 +393,7 @@ form div{
     color: var(--white);
     border-radius: 2px;
     font-size: 18px;
+    border: var(--blue);
 }
 /*FOOTER*/
 .companylist{
