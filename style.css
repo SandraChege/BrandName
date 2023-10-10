@@ -79,6 +79,7 @@ nav .button a{
     display: flex;
     gap: 2rem;
     margin-top: 1.2rem;
+    margin-bottom: 3rem;   /*Added this*/
 }
 .homebuttons .homebutton1{
     background-color: var(--blue);
@@ -99,7 +100,7 @@ nav .button a{
     align-items: center;
     justify-content: center;
     gap: 1.8rem;
-    margin-top: -50px;
+    margin-top: -30px;
 } 
 .home-cardbody .hcard{
     background-color: var(--white);
@@ -109,13 +110,12 @@ nav .button a{
     color: var(--blue);
     font-size: 40px;
 }
-.home-cardbody .h3card{
+.home-cardbody .hcard:hover{
     background-color: var(--blue);
     color: white;
 } 
-.home-cardbody .h3card .hicon{
+.home-cardbody .hcard .hicon:hover{
     color: var(--white);
-    font-size: 40px;
 }
 
 /*PRICING*/
@@ -443,6 +443,32 @@ form div{
     font-size: 20px;
     padding-right: 10px;
 }
+@media screen and (max-width:840px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .personprofile{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "profileone"
+        "profiletwo"
+        "profilethree";
+        justify-items: center;
+        align-items: center;
+    }
+    .personcard{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
 @media screen and (max-width:800px) {
     .homebuttons{
         margin-bottom: 2.5rem;
@@ -473,8 +499,65 @@ form div{
    }
    .part5 .footericon{
     font-size: 18px;
-    color: green;
    }
+}
+@media screen and (max-width:725px) {
+    .home-cardbody{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "card111" "card112" "card113";
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .h1card{
+        grid-area: card111;
+    }
+    .h2card{
+        grid-area: card112;
+    }
+    .h3card{
+        grid-area: card113;
+    }
+    .home-cardbody .hcard{
+        border: 1px solid black;
+    }
+    .pricecardcontainer{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "card11" "card12" "card13";
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .free{
+        grid-area: card11;
+    }
+    .standard{
+        grid-area: card12;
+    }
+    .premium{
+        grid-area: card13;
+    }
+}
+@media screen and (max-width:600px){
+    .continent{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "world1" "world2";
+        padding: 20px;
+    }
+    .continenttext{
+        grid-area: world1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    .continentimage{
+        grid-area: world2;
+    }
 }
 @media screen and (max-width:420px){
     .hometxt h1{
