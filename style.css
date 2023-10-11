@@ -64,7 +64,6 @@ nav .button a{
     margin-top: 2rem;
     color: white;
     padding-top: 5rem;
-
 }
 .hometxt h1{
     text-transform: capitalize;
@@ -187,9 +186,9 @@ nav .button a{
 .personcard{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /*from spacearound*/
     align-items: center;
-    width: 50%; 
+    width: 70%; /*from 50%*/
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.1); 
     margin-bottom: 5em; /*change this*/
     margin-top: 3em;    /*change this*/
@@ -233,10 +232,13 @@ nav .button a{
     text-transform: capitalize;
     color: var(--white);
 }
-.letter .subletter h1 input[type=text], .letter .subletter h1 input[type=button]{
+/* .myletter{
+    display: flex;
+} */
+.letter .subletter .myletter input[type=text], .letter .subletter .myletter input[type=button]{
     padding: 10px;
 }
-.letter .subletter h1 input[type=button]{
+.letter .subletter .myletter input[type=button]{
     background-color: var(--blue);
     color: var(--white);
 }
@@ -317,12 +319,9 @@ nav .button a{
     padding-bottom: 3rem;
 }
 .continent{
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "world1 world2"; */
     display: flex;
     justify-content: space-between; 
+    align-items: center;
     padding: 2rem;
 }
 .continenttext{
@@ -443,33 +442,16 @@ form div{
     font-size: 20px;
     padding-right: 10px;
 }
-@media screen and (max-width:840px){
+@media screen and (max-width:800px) {
     nav{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .personprofile{
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "profileone"
-        "profiletwo"
-        "profilethree";
-        justify-items: center;
-        align-items: center;
+    .hometxt{
+        margin-top: 0.5rem;
     }
-    .personcard{
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        align-items: center;
-        width: 80%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-@media screen and (max-width:800px) {
     .homebuttons{
         margin-bottom: 2.5rem;
     }
@@ -482,18 +464,23 @@ form div{
     #industry .personcard p{
         font-size: 18px;
     }
+    .personprofile{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "profileone" "profiletwo" "profilethree";
+        justify-items: center;
+        align-items: center;
+    }
+    .personcard{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     #pricecard .cardbody .icongreen, #pricecard .cardbody .icongrey{
         font-size: 25px;
     }
-   #world .continenttext{
-    width: 30%;
-   } 
-   #world .continentimage{
-    width: 70%;
-   }
-   .formappointment form{
-    width: 45%;
-   }
    #myfooter .companylist P, #myfooter .rights p{
     font-size: 16px;
    }
@@ -508,6 +495,9 @@ form div{
         grid-template-areas: "card111" "card112" "card113";
         grid-template-columns: 1fr;
         gap: 1rem;
+        justify-items: center;
+        align-items: center;
+        margin-top: 0px;
     }
     .h1card{
         grid-area: card111;
@@ -518,8 +508,18 @@ form div{
     .h3card{
         grid-area: card113;
     }
-    .home-cardbody .hcard{
-        border: 1px solid black;
+    .division{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "division1" "division2" "division3";
+    }
+    .subletter{
+        display: flex;
+        flex-direction: column;
+    }
+    .myletter{
+        padding-top: 20px;
     }
     .pricecardcontainer{
         display: grid;
@@ -527,6 +527,8 @@ form div{
         grid-template-areas: "card11" "card12" "card13";
         grid-template-columns: 1fr;
         gap: 1rem;
+        justify-items: center;
+        align-items: center;
     }
     .free{
         grid-area: card11;
@@ -537,26 +539,58 @@ form div{
     .premium{
         grid-area: card13;
     }
-}
-@media screen and (max-width:600px){
     .continent{
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: 1fr;
         grid-template-areas: "world1" "world2";
-        padding: 20px;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
     }
     .continenttext{
-        grid-area: world1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-items: center;
         width: 100%;
+        grid-area: world1;
     }
     .continentimage{
         grid-area: world2;
+    }
+    .formappointment form{
+        width: 70%;
+    }
+    .lastworld{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lastworld div p{
+        text-align: center;
+    }
+    .lastworld .lastworldbtn{
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width:550px){
+    #industry p{
+        text-align: center;
+        font-size: small;
+    }
+    .formappointment form{
+        width: 50%;
+    }
+    .continenttext{
+        font-size: small;
+        text-align: center;
+    }
+    .continentimage img{
+        width: 50vw;
+    }
+    .companylist{
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "one" "two" "three" "four" "five";   
     }
 }
 @media screen and (max-width:420px){
@@ -566,5 +600,24 @@ form div{
     .hometxt p{
         font-size: 15px;
         text-align: center;
+    }
+}
+@media screen and (max-width:300px) {
+    .cardbody p{
+        font-size: small;
+    } 
+    .lastworld .lastconsult h2, .lastworld .lastconsult p{
+        font-size: small;
+        text-align: center;
+    }
+    #myfooter .companylist div p, #myfooter .companylist div h3, #myfooter .rights p{
+        font-size: small;
+    }
+    .rights{
+        display: flex;
+        flex-direction: column;
+    }
+    .rights .icons{
+        padding-top: 10px;
     }
 }
