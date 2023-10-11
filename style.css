@@ -113,7 +113,7 @@ nav .button a{
     background-color: var(--blue);
     color: white;
 } 
-.home-cardbody .hcard .hicon:hover{
+.home-cardbody .hcard:hover .hicon{
     color: var(--white);
 }
 
@@ -263,6 +263,9 @@ nav .button a{
     border: 1px solid  var(--blue);
     padding: 20px;
     text-align: center;
+    transition: background-color 0.3s;
+    transition: height 0.3s;
+    border-radius: 10px;
 }
 .cardbody h2{
     padding: 30px;
@@ -302,6 +305,8 @@ nav .button a{
 .cardbody:hover{
     background-color: var(--darkblue);
     color: var(--white);
+    transform: scaleY(1.1);
+
 }
 .cardbody button{
     background-color: var(--blue);
@@ -585,6 +590,14 @@ form div{
     }
     .continentimage img{
         width: 50vw;
+    }
+    .appointmentimage{
+        display: none;
+    }
+    form{
+        background-image: url('./images/contact.png');
+        background-position: center;
+        background-size: cover;
     }
     .companylist{
         display: grid;
